@@ -3,7 +3,7 @@
     <form @submit="onSubmit" class="row g-3">
       <div class="col-12">
         <label for="title" class="form-label">Title</label>
-        <input id="title" v-model="title" placeholder="INPUT TITLE" class="rabaranks" required   type="text"/>
+        <input id="title" v-model="title" placeholder="TITLE" class="rabaranks" required   type="text"/>
       </div>
 
       <div class="col-12">
