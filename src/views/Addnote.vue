@@ -43,10 +43,12 @@ export default {
           return
         } else {
           const NewNote = {
-            id: Math.floor(Math.random() * 121 ),
+            id: localStorage.getItem("id") && JSON.parse(localStorage.getItem("notes")).length > 0 ?
+                parseInt(localStorage.getItem("id")) : 1,
             title: this.title,
             content: this.content
           }
+          localStorage.setItem("id", NewNote.id + 1);
         let notes = [];
         var presentNotes = localStorage.getItem('notes');
         var deserialisedpresentNotes = JSON.parse(presentNotes);
